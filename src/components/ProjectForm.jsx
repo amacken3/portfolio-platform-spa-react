@@ -17,22 +17,22 @@ function ProjectForm({ onAddProject }) {
   }
 
   function handleSubmit(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  const newProject = {
-    id: Date.now(),
-    ...formData,
-  };
+    const newProject = {
+      id: Date.now(),
+      ...formData,
+    };
 
-  onAddProject(newProject);
+    onAddProject(newProject);
 
-  setFormData({
-    title: "",
-    description: "",
-    fullDescription: "",
-    githubUrl: "",
-    liveDemoUrl: "",
-  });
+    setFormData({
+      title: "",
+      description: "",
+      fullDescription: "",
+      githubUrl: "",
+      liveDemoUrl: "",
+    });
 }
 
   return (
@@ -44,6 +44,7 @@ function ProjectForm({ onAddProject }) {
         name="title"
         value={formData.title}
         onChange={handleChange}
+        required
       />
 
       <label htmlFor="description">Description:</label>
@@ -53,6 +54,7 @@ function ProjectForm({ onAddProject }) {
         name="description"
         value={formData.description}
         onChange={handleChange}
+        required
       />
 
       <label htmlFor="fullDescription">Full Description:</label>
@@ -61,24 +63,28 @@ function ProjectForm({ onAddProject }) {
         name="fullDescription"
         value={formData.fullDescription}
         onChange={handleChange}
+        required
+        className="full-description-input"
       />
 
       <label htmlFor="githubUrl">GitHub URL:</label>
       <input
         id="githubUrl"
-        type="text"
+        type="url"
         name="githubUrl"
         value={formData.githubUrl}
         onChange={handleChange}
+        required
       />
 
       <label htmlFor="liveDemoUrl">Live Demo URL:</label>
       <input
         id="liveDemoUrl"
-        type="text"
+        type="url"
         name="liveDemoUrl"
         value={formData.liveDemoUrl}
         onChange={handleChange}
+        required
       />
 
       <button type="submit">Add Project</button>

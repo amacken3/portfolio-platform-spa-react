@@ -29,3 +29,9 @@ header h1 {
   border-radius: 8px;
   background: white;
 }
+
+.full-description-input {
+  resize: none;
+  width: 100%;
+  min-height: 120px;
+}

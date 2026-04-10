@@ -13,3 +13,9 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.full-description-input {
+  resize: none;
+  width: 100%;
+  min-height: 120px;
+}
