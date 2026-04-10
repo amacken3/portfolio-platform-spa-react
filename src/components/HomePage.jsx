@@ -25,10 +25,10 @@ function HomePage ({ projects, onAddProject }) {
     return (
         <div className="home-page">
             <ProjectForm onAddProject={onAddProject} />
-                <SearchBar
-                    searchTerm={searchTerm}
-                    onSearchChange={handleSearchChange}
-                />
+            <SearchBar
+                searchTerm={searchTerm}
+                onSearchChange={handleSearchChange}
+            />
             <ProjectList projects={filteredProjects} />
         </div>
     );
