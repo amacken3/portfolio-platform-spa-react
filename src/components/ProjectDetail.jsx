@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import styles from "./ProjectDetail.module.css";
 
 function ProjectDetail({ projects }) {
   const { id } = useParams();
@@ -6,19 +7,37 @@ function ProjectDetail({ projects }) {
   const project = projects.find((project) => project.id === Number(id));
 
   if (!project) {
-    return <div className="project-detail">Project not found.</div>;
+    return <div className={styles.detailCard}>Project not found.</div>;
   }
 
   return (
-    <div className="project-detail">
-      <h2>{project.title}</h2>
-      <p>{project.fullDescription}</p>
-      <a href={project.githubUrl} target="_blank" rel="noreferrer">
-        GitHub
-      </a>
-      <a href={project.liveDemoUrl} target="_blank" rel="noreferrer">
-        Live Demo
-      </a>
+    <div className={styles.detailCard}>
+      <Link className={styles.backLink} to="/">
+        ← Back to Projects
+      </Link>
+
+      <h2 className={styles.title}>{project.title}</h2>
+      <p className={styles.description}>{project.fullDescription}</p>
+
+      <div className={styles.links}>
+        <a
+          className={styles.link}
+          href={project.githubUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          className={styles.link}
+          href={project.liveDemoUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Live Demo
+        </a>
+      </div>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ProjectForm from './ProjectForm.jsx'
 import SearchBar from './SearchBar.jsx'
 import ProjectList from './ProjectList.jsx'
+import styles from "./HomePage.module.css";
 
 function HomePage ({ projects, onAddProject }) {
     const [searchTerm, setSearchTerm] = useState("")
@@ -23,13 +24,15 @@ function HomePage ({ projects, onAddProject }) {
     });
 
     return (
-        <div className="home-page">
-            <ProjectForm onAddProject={onAddProject} />
-            <SearchBar
-                searchTerm={searchTerm}
-                onSearchChange={handleSearchChange}
-            />
-            <ProjectList projects={filteredProjects} />
+        <div className={styles.page}>
+            <div classname={styles.content}>
+                <ProjectForm onAddProject={onAddProject} />
+                <SearchBar
+                    searchTerm={searchTerm}
+                    onSearchChange={handleSearchChange}
+                />
+                <ProjectList projects={filteredProjects} />
+            </div>
         </div>
     );
 }
