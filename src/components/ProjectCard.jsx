@@ -5,26 +5,32 @@ function ProjectCard({ project }) {
   return (
     <div className={styles.card}>
       <h3 className={styles.title}>{project.title}</h3>
-      <p className={styles.description}>{project.description}</p>
+      {project.description && (
+        <p className={styles.description}>{project.description}</p>
+      )}
 
       <div className={styles.links}>
-        <a
-          className={styles.link}
-          href={project.githubUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
+        {project.githubUrl && (
+          <a
+            className={styles.link}
+            href={project.githubUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
           GitHub
         </a>
+        )} 
 
-        <a
-          className={styles.link}
-          href={project.liveDemoUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Live Demo
-        </a>
+        {project.liveDemoUrl && (
+          <a
+            className={styles.link}
+            href={project.liveDemoUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Live Demo
+          </a>
+)}
 
         <Link className={styles.link} to={`/projects/${project.id}`}>
           View Details

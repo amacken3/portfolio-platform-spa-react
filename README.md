@@ -1,16 +1,44 @@
-# React + Vite
+# Project Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Portfolio is a single-page React application built to showcase portfolio projects for developers in a clean and responsive layout. Users can browse projects, search through them, add new ones dynamically, and view project details using client-side routing.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- View a list of portfolio projects on the homepage
+- Search projects by title or description
+- Add new projects through a controlled form
+- View individual project details on a separate route
+- Responsive layout styled with CSS Modules
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- React Router DOM
+- CSS Modules
 
-## Expanding the ESLint configuration
+## Usage Instructions
+- The homepage displays all available projects.
+- Use the Search Projects input to filter projects by title or description.
+- Use the Add Project form to create a new project by entering:
+- Title (required)
+- Description 
+- Full Description (required)
+- GitHub URL (required)
+- Live Demo URL 
+- Click Add Project to add the project to the portfolio list.
+- Click View Details on a project card to open the detailed project page.
+- Use the links on each project card or detail page to visit the GitHub repository or live demo.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup Instructions
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/amacken3/portfolio-platform-spa-react.git
+
+cd portfolio-platform-spa-react
+
+npm install
+
+npm run dev

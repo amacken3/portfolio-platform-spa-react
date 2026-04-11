@@ -5,8 +5,9 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #222;
+  background: linear-gradient(180deg, #074ea5 0%, #2d60a3 35%, #8ba9d1 70%, #f8fbff 100%);
+  color: #1f2937;
+  min-height: 100vh;
 }
 
 img {

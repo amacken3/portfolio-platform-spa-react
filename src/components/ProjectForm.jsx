@@ -67,7 +67,6 @@ function ProjectForm({ onAddProject }) {
             name="description"
             value={formData.description}
             onChange={handleChange}
-            required
           />
         </div>
 
@@ -111,7 +110,6 @@ function ProjectForm({ onAddProject }) {
             name="liveDemoUrl"
             value={formData.liveDemoUrl}
             onChange={handleChange}
-            required
           />
         </div>
 

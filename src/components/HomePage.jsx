@@ -25,13 +25,16 @@ function HomePage ({ projects, onAddProject }) {
 
     return (
         <div className={styles.page}>
-            <div classname={styles.content}>
+            <div className={styles.content}>
                 <ProjectForm onAddProject={onAddProject} />
-                <SearchBar
-                    searchTerm={searchTerm}
-                    onSearchChange={handleSearchChange}
-                />
-                <ProjectList projects={filteredProjects} />
+
+                <div className={styles.projectsSection}>
+                    <SearchBar
+                        searchTerm={searchTerm}
+                        onSearchChange={handleSearchChange}
+                    />
+                    <ProjectList projects={filteredProjects} />
+                </div>
             </div>
         </div>
     );
