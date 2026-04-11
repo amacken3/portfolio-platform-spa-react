@@ -24,7 +24,7 @@ Project Portfolio is a single-page React application built to showcase portfolio
 - Title (required)
 - Description 
 - Full Description (required)
-- GitHub URL (required)
+- GitHub URL
 - Live Demo URL 
 - Click Add Project to add the project to the portfolio list.
 - Click View Details on a project card to open the detailed project page.

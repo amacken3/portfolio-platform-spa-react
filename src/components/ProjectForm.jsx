@@ -95,7 +95,6 @@ function ProjectForm({ onAddProject }) {
             name="githubUrl"
             value={formData.githubUrl}
             onChange={handleChange}
-            required
           />
         </div>
 

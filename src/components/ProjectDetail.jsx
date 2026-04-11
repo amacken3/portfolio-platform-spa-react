@@ -19,25 +19,31 @@ function ProjectDetail({ projects }) {
       <h2 className={styles.title}>{project.title}</h2>
       <p className={styles.description}>{project.fullDescription}</p>
 
-      <div className={styles.links}>
-        <a
-          className={styles.link}
-          href={project.githubUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub
-        </a>
+      {(project.githubUrl || project.liveDemoUrl) && (
+        <div className={styles.links}>
+          {project.githubUrl && (
+            <a
+              className={styles.link}
+              href={project.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          )}
 
-        <a
-          className={styles.link}
-          href={project.liveDemoUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Live Demo
-        </a>
-      </div>
+          {project.liveDemoUrl && (
+            <a
+              className={styles.link}
+              href={project.liveDemoUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live Demo
+            </a>
+          )}
+        </div>
+      )}
     </div>
   );
 }
